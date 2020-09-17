@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+/*starting from smaller to bigger... i guess...*/
+
+
+/* START GENERAL SETTINGS */
 
 body {
     font-family: 'Zilla Slab', serif;
@@ -19,15 +23,25 @@ html {
 
 
 /*navbar*/
+.navbar {
+    grid-area: navbar;
+    background-color: beige;
+}
+/* nested-navbar*/
+.navbar .nested-navbar ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* nested-navbar*/
+
 .navbar ul {
-    display: inline-flex;
+    display: table;
     list-style-type: none;
     padding: 8px 8px;
 }
 .navbar ul li{
     padding-top: 12px;
     padding-bottom: 12px;
-    margin-left: 15px;
     text-align: center;
 }
 .navbar ul li  a {
@@ -38,11 +52,13 @@ html {
     text-decoration: none;
 }
 .navbar ul li a:hover{
-    font-size: 24px;
+    font-size: 22px;
     color: red;
     transition: .5s;
 }
+
 /*navbar*/
+
 
 /* GRID LAYOUT */
 .grid-container > * {
@@ -65,10 +81,6 @@ html {
 }
 /*header*/
 
-.navbar {
-    grid-area: navbar;
-    background-color: beige;
-}
 
 .container {
     grid-area: container;
@@ -285,6 +297,80 @@ html {
 
 
 
+/* FORM STYLE */
+
+.container form{
+    align-content: center;
+    padding: .5rem .5rem;
+}
+.container form label {
+    font-size: 1.3rem;
+    padding: .4rem .4rem;
+}
+.container form div {
+    border: 3px solid beige;
+    border-radius: 5%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0px 10px 12px 6px rgba(0,0,0,0.75);
+}
+.container form input {
+    font-size: large;
+}
+.container form select {
+    font-size: x-large;
+}
+.container form option {
+    font-size: x-large;
+}
+.container form p {
+    padding: .5rem .5rem;
+    font-size: medium;
+}
+.container form input[type=submit]{
+    font-size: 2rem;
+    padding: 0.4rem 0.4rem;
+    margin-bottom: .5rem;
+    background-color: rgba(245, 245, 220, 0.671);
+    border-radius: 5%;
+    box-shadow: 0px 1px 7px 2px rgba(0,0,0,0.75);
+}
+.container form input[type=submit]:hover{
+    background-color: rgba(179, 179, 106, 0.377);
+}
+/* FORM STYLE */
+
+
+
+
+/* END GENERAL SETTINGS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GRID SETTINGS*/
+
 /*mobile layout*/
 .grid-container {
     display: grid;
@@ -292,12 +378,13 @@ html {
     background-color: black;
     grid-template:
     "header    " 100px
-    "navbar    " 100px
+    "navbar    " 170px
     "sidebar   " auto
     "container " auto
     "footer    " 80px
     ;
 }
+
 
 /*tablet layout*/
 @media (min-width: 600px) {
@@ -336,20 +423,25 @@ html {
     /*nested signs*/
 
     /*navbar*/
+    .navbar {
+        text-align: center;
+    }
     .navbar ul {
-        display: inline-flex;
+        display: inline;
         list-style-type: none;
     }
     .navbar ul li{
-        padding-top: 12px;
-        padding-bottom: 12px;
-        margin-left: 15px;
-        text-align: center;
+        padding: 0.5rem 0.5rem;
     }    
     .navbar ul li a {
         font-size: 1.2rem;
         transition: all 0.5s ease 0s;
     }
+    /* nested-navbar*/
+    .navbar .nested-navbar ul {
+        display: inline-flex;
+    }
+    /* nested-navbar*/
     /*navbar*/
 
     /*footer*/
@@ -401,6 +493,38 @@ html {
         font-size: 2.5rem;
     }
 
+    /* FORM SECTION */
+    .container form div {
+        width: 82%;
+        border: 3px solid beige;
+        border-radius: 5%;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        box-shadow: 0px 10px 12px 6px rgba(0,0,0,0.75);
+    }
+    .container form input {
+        font-size: x-large;
+    }
+    .container form select {
+        font-size: x-large;
+    }
+    .container form option {
+        font-size: x-large;
+    }
+    .container form label {
+        font-size: x-large;
+        padding: .4rem .4rem;
+    }
+    .container form input[type=submit]{
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    /* FORM SECTION */
+
 
 }
 
@@ -440,6 +564,11 @@ html {
         font-size: 20px;
         transition: all 0.5s ease 0s;
     }
+    /* nested-navbar*/
+    .navbar .nested-navbar ul {
+        display: table;
+    }
+    /* nested-navbar*/
     /*navbar*/
 
     /*tarot*/
@@ -453,6 +582,7 @@ html {
         width: 20%;
     }
     /*tarot*/
+
     /*daily and weekly horoscope*/
     .nested-signs{
         display: grid;
@@ -461,8 +591,28 @@ html {
     .nested-signs img{
         width: 100%;
     }
-
-
     /*daily and weekly horoscope*/
+
+    /* CONTACT FORM*/
+    .container form div {
+        width: 60%;
+        border: 3px solid beige;
+        border-radius: 5%;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        box-shadow: 0px 10px 12px 6px rgba(0,0,0,0.75);
+    }
+    .container form label{
+        font-size: 1.5rem;
+    }
+    .container form input {
+        font-size: 1.5rem;
+    }
+    /* CONTACT FORM*/
 }
-/* END GRID LAYOUT */
+
+/* GRID SETTINGS*/
