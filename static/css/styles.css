@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -90,6 +91,17 @@ html {
 .container h1 {
     padding: 0.4rem 0.4rem;
 }
+
+/* IFRAME ¬_¬*/
+.container iframe {
+    width: 90%;
+    height: 80%;
+    margin: 1rem auto;
+    border: 5px solid black;
+    box-shadow: 10px 10px 10px -1px rgba(0,0,0,0.75);
+    border-radius: 6%;
+}
+/* IFRAME ¬_¬*/
 
 .nested-container {
     display: grid;
@@ -350,11 +362,7 @@ html {
 
 
 
-
 /* END GENERAL SETTINGS */
-
-
-
 
 
 
@@ -396,7 +404,7 @@ html {
 @media (min-width: 600px) {
     .grid-container {
         grid-template: 
-        "header    header"    100px
+        "header    header"    165px
         "navbar    navbar"    85px
         "container sidebar"   auto
         "footer    footer"    100px /
