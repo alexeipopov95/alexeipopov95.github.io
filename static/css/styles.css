@@ -73,13 +73,13 @@ html {
     margin: 0;
     padding: 0;
     grid-area: header;
-    background-color: coral;
 }
 .header img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 /*header*/
 
 
@@ -280,12 +280,21 @@ html {
     margin-top: 1rem;
     padding-top: 1rem;
 }
+.nested-signs .socials-share h3 {
+    margin-bottom: 1rem;
+    font-size: 25px;
+
+}
 .nested-signs .socials-share i {
-    margin-bottom: 0.2rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    padding: 0.5rem 0.5rem;
     color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.75);
+
 }
 .nested-signs h2 {
     margin: .2rem .2rem;
